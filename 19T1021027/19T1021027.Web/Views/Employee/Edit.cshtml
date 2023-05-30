@@ -1,0 +1,119 @@
+﻿@model  _19T1021027 .DomainModels.Employee
+@{
+
+}
+
+<div class="box box-primary">
+    <div class="box-body">
+        <form class="form-horizontal" action="~/Employee/Save" method="post" enctype="multipart/form-data">
+            @Html.AntiForgeryToken()
+            @Html.HiddenFor(m => m.EmployeeID)
+            @*@Html.ValidationSummary("", new { @style = "coler:@f00" })*@
+            <input type="hidden" name="EmployeeID" value="@Model.EmployeeID" />
+            <div class="form-group">
+                <label class="control-label col-sm-2">Avatar:</label>
+                <div class="col-sm-10">
+                    <img src="~/Photo/@Model.Photo" class="profile-user-img" alt="Empolyee Image" />
+                    @Html.HiddenFor(m => m.Photo)
+                    <input type="file" name="uploadPhoto" class="form-control" onchange="document.getElementById('photo').src= window.URL.creatObjectURL(this.files[0])" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="text">Tên nhân viên:</label>
+                <div class="col-sm-10">
+                    <input type="text"
+                           class="form-control"
+                           id="FirstName"
+                           name="FirstName"
+                           placeholder="Nhập tên nhân viên"
+                           value="@Model.FirstName" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="text">Họ nhân viên:</label>
+                <div class="col-sm-10">
+                    <input type="text"
+                           class="form-control"
+                           id="LastName"
+                           name="LastName"
+                           placeholder="Nhập họ nhân viên"
+                           value="@Model.LastName">
+                </div>
+            </div>
+
+
+
+            <!--<div class="form-group">
+    <label class="control-label col-sm-2" for="birthdate">Ngày sinh:</label>
+    <div class="col-sm-10">
+        <input type="text" name="birthday" class="form-control" id="birthdate" placeholder="Nhập ngày sinh" value="@string.Format("{0:dd/MM/yyyy}", Model.BirthDate)">-->
+            @* @Html.HiddenFor(m => m.BirthDate)*@
+            <!--</div>
+    </div>-->
+            <div class="form-group">
+                <label class="control-label col-sm-2">Ngày Sinh:</label>
+                <div class="col-sm-10">
+                    <input type="text"
+                           class="form-control"
+                           id="BirthDate"
+                           placeholder="Nhập Ngày Sinh"
+                           name="birthday"
+                           value="@string.Format("{0:dd/MM/yyyy}",Model.BirthDate)">
+                </div>
+            </div>
+
+            @*<div class="form-group">
+            <label class="control-label col-sm-2" for="text">Ảnh:</label>
+            <div class="row py-4">
+                <div class="col-lg-6 mx-auto">
+                    <div class="input-group mb-3 px-2 py-2 rounded-pill bg-white shadow-sm">
+                        <input id="upload"
+                               type="file"
+                               onchange="readURL(this);"
+                               class="form-control border-0"
+                               name="Photo"
+                               value="@Model.Photo">
+                    </div>
+                </div>
+            </div>
+        </div>*@
+
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="text">Ghi Chú:</label>
+                @*<div class="col-sm-10">
+                <textarea class="form-control" rows="3" placeholder="Enter ..." ></textarea>
+            </div>*@
+                <div class="col-sm-10">
+                    @Html.TextBoxFor(m => m.Notes,
+                        new { @class = "form-control", @placeholder = "Nhập ghi chú", @autufocus = "autufocus" })
+                    @Html.ValidationMessageFor(m => m.Notes, "", new { @style = "coler:@f00" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="email">Email:</label>
+                <div class="col-sm-10">
+                    <input type="text"
+                           class="form-control"
+                           id="Email"
+                           name="Email"
+                           placeholder="Nhập email" value="@Model.Email">
+                </div>
+            </div>
+            
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="glyphicon glyphicon-floppy-disk"></i> Lưu dữ liệu
+                    </button>
+                    <a href="~/Employee" class="btn btn-warning">
+                        Quay Lại
+                    </a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+

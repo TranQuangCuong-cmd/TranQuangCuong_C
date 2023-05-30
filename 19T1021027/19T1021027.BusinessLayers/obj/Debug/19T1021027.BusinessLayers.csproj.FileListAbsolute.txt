@@ -1,0 +1,11 @@
+D:\WEB4\19T1021027\19T1021027.BusinessLayers\bin\Debug\19T1021027.BusinessLayers.dll
+D:\WEB4\19T1021027\19T1021027.BusinessLayers\bin\Debug\19T1021027.BusinessLayers.pdb
+D:\WEB4\19T1021027\19T1021027.BusinessLayers\bin\Debug\19T1021027.DataLayers.dll
+D:\WEB4\19T1021027\19T1021027.BusinessLayers\bin\Debug\19T1021027.DomainModels.dll
+D:\WEB4\19T1021027\19T1021027.BusinessLayers\bin\Debug\19T1021027.DataLayers.pdb
+D:\WEB4\19T1021027\19T1021027.BusinessLayers\bin\Debug\19T1021027.DomainModels.pdb
+D:\WEB4\19T1021027\19T1021027.BusinessLayers\obj\Debug\19T1021027.BusinessLayers.csproj.AssemblyReference.cache
+D:\WEB4\19T1021027\19T1021027.BusinessLayers\obj\Debug\19T1021027.BusinessLayers.csproj.CoreCompileInputs.cache
+D:\WEB4\19T1021027\19T1021027.BusinessLayers\obj\Debug\19T1021027.BusinessLayers.csproj.CopyComplete
+D:\WEB4\19T1021027\19T1021027.BusinessLayers\obj\Debug\19T1021027.BusinessLayers.dll
+D:\WEB4\19T1021027\19T1021027.BusinessLayers\obj\Debug\19T1021027.BusinessLayers.pdb

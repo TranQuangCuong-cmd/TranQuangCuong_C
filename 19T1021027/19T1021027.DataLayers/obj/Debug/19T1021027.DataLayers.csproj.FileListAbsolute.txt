@@ -1,0 +1,9 @@
+D:\WEB4\19T1021027\19T1021027.DataLayers\bin\Debug\19T1021027.DataLayers.dll
+D:\WEB4\19T1021027\19T1021027.DataLayers\bin\Debug\19T1021027.DataLayers.pdb
+D:\WEB4\19T1021027\19T1021027.DataLayers\bin\Debug\19T1021027.DomainModels.dll
+D:\WEB4\19T1021027\19T1021027.DataLayers\bin\Debug\19T1021027.DomainModels.pdb
+D:\WEB4\19T1021027\19T1021027.DataLayers\obj\Debug\19T1021027.DataLayers.csproj.AssemblyReference.cache
+D:\WEB4\19T1021027\19T1021027.DataLayers\obj\Debug\19T1021027.DataLayers.csproj.CoreCompileInputs.cache
+D:\WEB4\19T1021027\19T1021027.DataLayers\obj\Debug\19T1021027.DataLayers.csproj.CopyComplete
+D:\WEB4\19T1021027\19T1021027.DataLayers\obj\Debug\19T1021027.DataLayers.dll
+D:\WEB4\19T1021027\19T1021027.DataLayers\obj\Debug\19T1021027.DataLayers.pdb

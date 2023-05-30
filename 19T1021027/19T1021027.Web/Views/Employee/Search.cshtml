@@ -1,0 +1,70 @@
+﻿@model _19T1021027.Web.Models.EmployeeSearchOutput
+@{ Layout = null; }
+<p>Có <strong>@Model.RowCount</strong> bản ghi trong tổng số <strong>@Model.PageCount </strong>trang</p>
+
+<div class="row">
+    @foreach (var item in Model.Data)
+    {
+<div class="col-md-4">
+    <!-- Widget: user widget style 1 -->
+    <div class="box box-widget widget-user-2">
+        <!-- Add the bg color to the header using any of the bg-* classes -->
+        <div class="widget-user-header bg-yellow">
+            <div class="widget-user-image">
+                <img class="img-circle" src="~/Photo/@item.Photo" alt="User Avatar">
+            </div>
+            <!-- /.widget-user-image -->
+            <h3 class="widget-user-username">@item.LastName</h3>
+            <h5 class="widget-user-desc">@item.FirstName</h5>
+        </div>
+        <div class="box-footer no-padding">
+            <ul class="nav nav-stacked">
+                <li>Họ :<span class="pull-right badge bg-blue">@item.LastName</span></li>
+                <li>Tên :<span class="pull-right badge bg-blue">@item.FirstName</span></li>
+                <li>Ngày sinh :<span class="pull-right badge bg-blue">@item.BirthDate</span></li>
+                <li>Email :<span class="pull-right badge bg-blue">@item.Email</span></li>
+                <li>Ghi chú :</li>
+
+            </ul>
+        </div>
+        <div>
+            <ul class="nav nav-stacked">
+                <li>
+                    <div class="form-group">
+                        <span class="form-control" rows="3" disabled>@item.Notes</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="pull-left">
+                        <a href="~/Employee/Edit/@item.EmployeeID" class="btn btn-success">
+                            Sửa
+                        </a>
+                    </span>
+                    <span class="pull-right">
+                        <a href="~/Employee/Delete/@item.EmployeeID" class="btn btn-danger">
+                            <i class="glyphicon glyphicon-trash"></i>
+                        </a>
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- /.widget-user -->
+</div>}
+</div>
+
+<div class="text-center">
+    <ul class="pagination">
+        @for (int i = 1; i <= Model.PageCount; i++)
+        {
+            if (i == Model.Page)
+            {
+                <li class="active"><a href="#">@i</a></li>
+            }
+            else
+            {
+                <li><a href="javascript:;" onclick="doSearch(@i)">@i</a></li>
+            }
+        }
+    </ul>
+</div>
